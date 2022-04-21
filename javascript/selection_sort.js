@@ -1,5 +1,16 @@
 function selectionSort(arr) {
   // type your code here
+  let newArr = []
+  let counter = arr.length
+  for (let i = 0; i < counter; i++) {
+    let min = Math.min(...arr)
+    let index = arr.indexOf(min)
+    arr.splice(index, 1)
+    newArr.push(min)
+    // console.log("min: ", min, "index: ", index, "arr:", newArr)
+  }
+
+  return newArr
 }
 
 if (require.main === module) {
